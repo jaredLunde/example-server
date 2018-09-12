@@ -1,8 +1,8 @@
 {
   "name": "@jaredlunde/example-server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A preconfigured Express + Webpack server for React application examples",
-  "main": "src/index.js",
+  "main": "cjs/index.js",
   "repository": "https://github.com/jaredLunde/example-server",
   "author": "Jared Lunde",
   "license": "MIT",
@@ -18,5 +18,11 @@
     "empty": "^0.10.1",
     "express": "^4.16.3",
     "express-no-favicons": "^0.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "build": "rimraf cjs && cross-env NODE_ENV=production BABEL_ENV=production babel src --out-dir cjs"
   }
 }
