@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/example-server",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A preconfigured Express + Webpack server for React application examples",
   "main": "index.js",
   "repository": "https://github.com/jaredLunde/example-server",
