@@ -1,0 +1,24 @@
+{
+  "name": "@jaredlunde/example-server",
+  "version": "1.0.1",
+  "description": "A preconfigured Express + Webpack server for React application examples",
+  "main": "src/index.js",
+  "repository": "https://github.com/jaredLunde/example-server",
+  "author": "Jared Lunde",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@inst-app/babel-preset-esx": "^1.0.2",
+    "@inst-app/babel-preset-react": "^1.0.0",
+    "@inst-app/webpack-deps": "^1.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "chalk": "^2.4.1",
+    "compression": "^1.7.3",
+    "empty": "^0.10.1",
+    "express": "^4.16.3",
+    "express-no-favicons": "^0.0.1"
+  }
+}
