@@ -1,0 +1,9 @@
+.git
+.DS_Store
+node_modules
+*.log
+cjs
+/createRenderer.js
+/createConfig.js
+/startServer.js
+/index.js
