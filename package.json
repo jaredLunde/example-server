@@ -1,6 +1,6 @@
 {
   "name": "@jaredlunde/example-server",
-  "version": "1.0.9",
+  "version": "2.0.1",
   "description": "A preconfigured Express + Webpack server for React application examples",
   "main": "index.js",
   "repository": "https://github.com/jaredLunde/example-server",
@@ -23,6 +23,9 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "build": "rimraf cjs && cross-env NODE_ENV=production BABEL_ENV=production babel src --out-dir ."
+    "build": "yarn build:api & yarn build:react & yarn build:shared",
+    "build:api": "rimraf api && cross-env NODE_ENV=production BABEL_ENV=production babel api-src --out-dir ./api",
+    "build:react": "rimraf react && cross-env NODE_ENV=production BABEL_ENV=production babel react-src --out-dir ./react",
+    "build:shared": "cross-env NODE_ENV=production BABEL_ENV=production babel src --out-dir ."
   }
 }
