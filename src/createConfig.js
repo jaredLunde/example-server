@@ -10,12 +10,15 @@ module.exports = function createConfig (...configs) {
     ...config
   } = merge.smartStrategy({'module.rules': 'prepend'})(...configs)
 
-  const envTarget = target === 'node' ? {"node": "current"} : {"browsers": "defaults"}
+  const envTarget =
+    target === 'node'
+      ? {"node": "current"}
+      : {"browsers": "defaults"}
 
   const mainFields =
     target === 'web'
-    ? ['browser', 'module', 'jsnext', 'esnext', 'jsnext:main', 'main']
-    : ['module', 'jsnext', 'esnext', 'jsnext:main', 'main']
+      ? ['browser', 'module', 'jsnext', 'esnext', 'jsnext:main', 'main']
+      : ['module', 'jsnext', 'esnext', 'jsnext:main', 'main']
 
   return merge.smartStrategy({'module.rules': 'prepend'})(
     {
@@ -57,13 +60,13 @@ module.exports = function createConfig (...configs) {
                     '@inst-app/esx', {
                       env: {
                         "useBuiltIns": "usage",
-                        "loose": true,
-                        "modules": false
+                        "modules": false,
+                        "targets": envTarget
                       },
                       "runtime": {corejs: 2}
                     }
                   ],
-                  '@inst-app/react',
+                  '@inst-app/react'
                 ],
                 comments: process.env.NODE_ENV === 'development'
               }
@@ -73,9 +76,7 @@ module.exports = function createConfig (...configs) {
         ]
       },
 
-      plugins: [
-        new WriteFilePlugin()
-      ],
+      plugins: [new WriteFilePlugin()],
 
       // Include mocks for when node.js specific modules may be required
       node: {

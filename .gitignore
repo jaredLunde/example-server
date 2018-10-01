@@ -2,8 +2,8 @@
 .DS_Store
 node_modules
 *.log
-cjs
+react
+api
 /createRenderer.js
 /createConfig.js
 /startServer.js
-/index.js

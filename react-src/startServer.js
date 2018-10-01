@@ -36,7 +36,7 @@ module.exports = function startServer ({
         host,
         () => {
           isBuilt = true
-          console.log(chalk.green(`[Broker SSR] ${host}:${port}`))
+          console.log(chalk.green(`[Example SSR] ${host}:${port}`))
         }
       )
     }
